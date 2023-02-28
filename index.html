@@ -4,11 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WepPro64070165</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
+    <div id="app">
+        <section class="hero is-info has-text-centered is-medium">
+            <!-- navigation bar -->
+            <nav class="navbar" role="navigtion" aria-label="main navigation">
+                <div id="navbar1" class="navbar-menu">
+                    <div class="navbar-start has-background-info-dark">
+                        <a class="navbar-item has-text-centered">
+                            Home
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero-body">
+                <p class="title">
+                    Game review
+                </p>
+                <p class="subtitle">
+                    What kind of game are you looking for?
+                </p>
+            </div>
+        </section>
 
+
+        <div class="columns">
+            <div class="column is-8 is-offset-2">
+                <!-- search bar -->
+                <div class="searchBar">
+                    <input class="input" type="text" placeholder="Search for something?">
+                </div>
+
+                <!-- Column game list -->
+                <div class="column is-12 pt-6">
+                    <h1 class="is-size-4 mb-4">Game list</h1>
+
+                    <div class="container is-max-desktop">
+                        <div class="is-multiline columns is-variable is-2">
+
+                            <!-- Card element start here -->
+                            <div id="card_game" class="column is-one-third" v-for="game in games">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image">
+                                            <img :src="game.img" alt="Placeholder image">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <p class="title is-4">{{game.name}}</p>
+                                                <p class="subtitle is-6">{{game.dev}}</p>
+                                                <p class="subtitle is-6 has-text-danger">{{game.price}} ฿</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
