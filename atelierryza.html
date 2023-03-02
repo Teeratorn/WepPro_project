@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WepPro64070165</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <div id="app1">
+        <section class="hero is-info has-text-centered is-medium">
+            <!-- navigation bar -->
+            <nav class="navbar" role="navigtion" aria-label="main navigation">
+                <div id="navbar1" class="navbar-menu">
+                    <div class="navbar-start has-background-info-dark">
+                        <a class="navbar-item has-text-centered" @click="goHome()">
+                            Home
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero-body">
+                <p class="title">
+                    Atelier Ryza: Ever Darkness & the Secret Hideout
+                </p>
+                <p class="subtitle">
+                    KOEI TECMO GAMES CO., LTD.
+                </p>
+            </div>
+        </section>
+
+
+        <div class="columns">
+            <div class="column is-8 is-offset-2">
+                <p class="title">Summary</p>
+                <p class="has-text-centered">Even though everyone has them,
+                    the memories we create with our friends are
+                    special to each and every one of us.<br><br>
+
+                    The story of "Atelier Ryza" is
+                    about a girl and her friends on the
+                    verge of adulthood,
+                    discovering what is most important to them.<br><br>
+
+                    <strong>World</strong><br>
+                    Journey to a new "Atelier" world,
+                    where you can experience the light, the shadows,
+                    and the very breath of the world itself.<br><br>
+
+                    <strong>System</strong><br>
+                    <strong>Evolved "Synthesis" system</strong>A new "Creation" system has been included,
+                    allowing players to create things never seen before
+                    in the "Atelier" series; more details coming soon.
+
+                    In addition, the synthesis system,
+                    gathering system and battle system has been revamped
+                    for a deeper and more exciting “Atelier” experience.<br><br>
+                </p>
+                <div class="field">
+                    <label class="label">Leave a review</label>
+                    <div class="control">
+                        <input class="input column is-one-quarter" type="text" placeholder="Name" v-model="name"><br>
+                        <textarea class="textarea" placeholder="Write something" v-model="reviewText"></textarea><br>
+                        <a class="button is-primary" @click="addReview(games[4])">Submit</a>
+                    </div>
+                </div>
+                <p class="title">Reviews</p>
+                <div id="card-review" class="column" v-for="review in games[4].reviews">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title">{{review.name}}</p>
+                                <p class="subtitle">{{review.text}}</p>
+                                <a class="button is-danger" @click="removeReview(games[4].reviews,i)">Remove review</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

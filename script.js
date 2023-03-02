@@ -34,14 +34,6 @@ var app = new Vue({
                 url: "darksoul3.html",
                 reviews: [{ name: 'Gabriel', text: 'Even the stupid mob can oneshot me.' }],
             },
-            {
-                name: "Atelier Ryza: Ever Darkness & the Secret Hideout",
-                dev: "KOEI TECMO GAMES CO., LTD.",
-                price: "1933",
-                img: 'http://cdn.shopify.com/s/files/1/0525/9585/1443/collections/j05hVPmIMqP3h680.jpg?v=1653965427',
-                url: "atelierryza.html",
-                reviews: [{ name: 'Sarah', text: 'This game alchemy system is so on point.' }],
-            },
         ],
         gameName: null,
     },
@@ -110,11 +102,11 @@ var app1 = new Vue({
     },
     methods: {
         goHome() {
-            location.replace("index.html")
+            location.href = "index.html"
         },
         goGame(url) {
             this.getJSON()
-            location.replace(url)
+            location.href = url
         },
         addReview(game) {
             game.reviews.push({ name: this.name, text: this.reviewText })

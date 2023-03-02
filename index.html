@@ -48,7 +48,7 @@
                         <div class="is-multiline columns is-2">
 
                             <!-- Card element start here -->
-                            <div id="card_game" class="column is-one-third" v-for="game in filterGames">
+                            <div id="card_game" class="column is-half" v-for="game in filterGames">
                                 <div class="card">
                                     <div class="card-image">
                                         <figure class="image">
@@ -61,8 +61,8 @@
                                                 <p class="title is-4">{{game.name}}</p>
                                                 <p class="subtitle is-6">{{game.dev}}</p>
                                                 <p class="subtitle is-6 has-text-danger">{{game.price}} ฿</p>
-                                                <a class="button is-info" @click="goGame(game.url)">Go to
-                                                    {{game.name}}'s page</a>
+                                                <a class="button is-info is-2" @click="goGame(game.url)">Go to
+                                                    game's page</a>
                                             </div>
                                         </div>
                                     </div>
