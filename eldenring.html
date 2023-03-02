@@ -35,22 +35,42 @@
         <div class="columns">
             <div class="column is-8 is-offset-2">
                 <p class="title">Summary</p>
-                <p>In the Lands Between ruled by Queen Marika the Eternal,
-                    the Elden Ring, the source of the Erdtree, has been shattered.
+                <p class="has-text-centered">In the Lands Between ruled by Queen Marika the Eternal,
+                    the Elden Ring, the source of the Erdtree, has been shattered.<br><br>
 
                     Marika's offspring, demigods all, claimed the shards of the Elden Ring known as the Great Runes,
-                    and the mad taint of their newfound strength triggered a war: The Shattering.
+                    and the mad taint of their newfound strength triggered a war: The Shattering.<br><br>
 
-                    A war that meant abandonment by the Greater Will.
+                    A war that meant abandonment by the Greater Will.<br><br>
 
                     And now the guidance of grace will be brought to the Tarnished
-                    who were spurned by the grace of gold and exiled from the Lands Between.
+                    who were spurned by the grace of gold and exiled from the Lands Between.<br><br>
 
                     Ye dead who yet live, your grace long lost,
                     follow the path to the Lands Between beyond the foggy sea
-                    to stand before the Elden Ring.
+                    to stand before the Elden Ring.<br><br>
 
-                    And become the Elden Lord.</p>
+                    And become the Elden Lord.<br><br>
+                </p>
+                <div class="field">
+                    <label class="label">Leave a review</label>
+                    <div class="control">
+                        <input class="input column is-one-quarter" type="text" placeholder="Name" v-model="name"><br>
+                        <textarea class="textarea" placeholder="Write something" v-model="reviewText"></textarea><br>
+                        <a class="button is-primary" @click="addReview(games[0])">Submit</a>
+                    </div>
+                </div>
+                <p class="title">Reviews</p>
+                <div id="card-review" class="column" v-for="review in games[0].reviews">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title">{{review.name}}</p>
+                                <p class="subtitle">{{review.text}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
