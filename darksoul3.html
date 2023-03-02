@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app1">
         <section class="hero is-info has-text-centered is-medium">
             <!-- navigation bar -->
             <nav class="navbar" role="navigtion" aria-label="main navigation">
@@ -62,12 +62,13 @@
                     </div>
                 </div>
                 <p class="title">Reviews</p>
-                <div id="card-review" class="column" v-for="review in games[3].reviews">
+                <div id="card-review" class="column" v-for="(review,i) in games[3].reviews">
                     <div class="card">
                         <div class="card-content">
                             <div class="content">
                                 <p class="title">{{review.name}}</p>
                                 <p class="subtitle">{{review.text}}</p>
+                                <a class="button is-danger" @click="removeReview(games[3].reviews,i)">Remove review</a>
                             </div>
                         </div>
                     </div>

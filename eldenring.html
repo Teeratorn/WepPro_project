@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app1">
         <section class="hero is-info has-text-centered is-medium">
             <!-- navigation bar -->
             <nav class="navbar" role="navigtion" aria-label="main navigation">
@@ -67,6 +67,7 @@
                             <div class="content">
                                 <p class="title">{{review.name}}</p>
                                 <p class="subtitle">{{review.text}}</p>
+                                <a class="button is-danger" @click="removeReview(games[0].reviews,i)">Remove review</a>
                             </div>
                         </div>
                     </div>
