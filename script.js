@@ -84,8 +84,6 @@ var app = new Vue({
     },
     methods: {
         goHome() {
-            this.getJSON()
-            this.setJSON()
             location.href = "main.html"
         },
         goGame(url) {
@@ -131,5 +129,16 @@ var app1 = new Vue({
     created() {
         let text = localStorage.getItem("Games")
         this.games = JSON.parse(text)
+    }
+})
+var app0 = new Vue({
+    el: '#start',
+    created() {
+        app.setJSON()
+    },
+    methods: {
+        goHome() {
+            location.href = "main.html"
+        }
     }
 })
