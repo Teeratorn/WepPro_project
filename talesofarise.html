@@ -23,10 +23,10 @@
             </nav>
             <div class="hero-body">
                 <p class="title">
-                    hololive ERROR
+                    Tales of Arise
                 </p>
                 <p class="subtitle">
-                    株式会社Mogura
+                    Bandai Namco Studios Inc.
                 </p>
             </div>
         </section>
@@ -36,37 +36,33 @@
             <div class="column is-8 is-offset-2">
                 <br>
                 <p class="has-text-centered">
+                    <strong>Challenge the Fate That Binds You</strong><br>
+                    On the planet Dahna, reverence has always been given to Rena, the planet in the sky, as a land of
+                    the righteous and divine. Stories handed down for generations became truth and masked reality for
+                    the people of Dahna. For 300 years, Rena has ruled over Dahna, pillaging the planet of its resources
+                    and stripping people of their dignity and freedom.<br><br>
 
-                    What if a program that seems to work normally is actually made up
-                    of distorted source code?――.<br><br>
-
-                    The world is small , just like a small bug can lead to a fatal error.
-                    [Mistakes]by
-                    ――.<br><br>
-
-                    To change this world
-                    ,[ERROR]
-                    If there is no choice but to correct――.<br><br>
-
-                    <strong>summer, various projects will start with the concept theme
-                        of “horror” .</strong><br><br>
+                    Our tale begins with two people, born on different worlds, each looking to change their fate and
+                    create a new future. Featuring a new cast of characters, updated combat, and classic Tales of
+                    gameplay mechanics, experience the next chapter in the world-famous Tale of series, Tales of
+                    Arise.<br><br>
                 </p>
                 <div class="field">
                     <label class="label">Leave a review</label>
                     <div class="control">
                         <input class="input column is-one-quarter" type="text" placeholder="Name" v-model="name"><br>
                         <textarea class="textarea" placeholder="Write something" v-model="reviewText"></textarea><br>
-                        <a class="button is-primary" @click="addReview(games[6])">Submit</a>
+                        <a class="button is-primary" @click="addReview(games[7])">Submit</a>
                     </div>
                 </div>
                 <p class="title">Reviews</p>
-                <div id="card-review" class="column" v-for="review in games[6].reviews">
+                <div id="card-review" class="column" v-for="review in games[7].reviews">
                     <div class="card">
                         <div class="card-content">
                             <div class="content">
                                 <p class="title">{{review.name}}</p>
                                 <p class="subtitle">{{review.text}}</p>
-                                <a class="button is-danger" @click="removeReview(games[6].reviews,i)">Remove review</a>
+                                <a class="button is-danger" @click="removeReview(games[7].reviews,i)">Remove review</a>
                             </div>
                         </div>
                     </div>
