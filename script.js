@@ -84,6 +84,7 @@ var app = new Vue({
     },
     methods: {
         goHome() {
+            this.getJSON()
             this.setJSON()
             location.href = "main.html"
         },

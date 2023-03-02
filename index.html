@@ -10,69 +10,11 @@
 
 <body>
     <div id="app">
-
-        <!-- navigation bar -->
-        <nav class="navbar has-background-info-dark" role="navigtion" aria-label="main navigation">
-            <div id="navbar1" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item has-text-centered has-text-white" @click="goHome()">
-                        Home
-                    </a>
-                </div>
-            </div>
-        </nav>
-        <section class="hero is-info has-text-centered is-medium">
+        <section class="hero is-info is-fullheight">
             <div class="hero-body">
-                <p class="title">
-                    Game review
-                </p>
-                <p class="subtitle">
-                    What kind of game are you looking for?
-                </p>
+                <a class="button is-primary" @click="goHome()">Go to main page</a>
             </div>
         </section>
-
-
-        <div class="columns">
-            <div class="column is-8 is-offset-2">
-                <!-- search bar -->
-                <div class="searchBar">
-                    <input class="input" type="text" placeholder="Search for something?" v-model="gameName">
-                </div>
-
-                <!-- Column game list -->
-                <div class="column is-12">
-                    <h1 class="is-size-4">Game list</h1>
-
-                    <div class="container is-max-desktop">
-                        <div class="is-multiline columns is-2">
-
-                            <!-- Card element start here -->
-                            <div id="card_game" class="column is-one-third" v-for="game in filterGames">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <figure class="image">
-                                            <img :src="game.img" alt="Placeholder image">
-                                        </figure>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="media">
-                                            <div class="media-content">
-                                                <p class="title is-4">{{game.name}}</p>
-                                                <p class="subtitle is-6">{{game.dev}}</p>
-                                                <p class="subtitle is-6 has-text-danger">{{game.price}} ฿</p>
-                                                <a class="button is-info is-2" @click="goGame(game.url)">Go to
-                                                    game's page</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
