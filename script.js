@@ -38,6 +38,9 @@ var app = new Vue({
         name: null,
         reviewText: null,
     },
+    watch: {
+        // games: sentJSON(),
+    },
     methods: {
         goHome() {
             location.replace("index.html")
@@ -47,6 +50,10 @@ var app = new Vue({
         },
         addReview(game) {
             game.reviews.push({ name: this.name, text: this.reviewText })
-        }
+        },
+        sentJSON() {
+            const myJSON = JSON.stringify(this.games)
+            localStorage.setItem("Games", myJSON)
+        },
     }
 })
