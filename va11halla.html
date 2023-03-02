@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WepPro64070165</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <div id="app1">
+        <section class="hero is-info has-text-centered is-medium">
+            <!-- navigation bar -->
+            <nav class="navbar" role="navigtion" aria-label="main navigation">
+                <div id="navbar1" class="navbar-menu">
+                    <div class="navbar-start has-background-info-dark">
+                        <a class="navbar-item has-text-centered" @click="goHome()">
+                            Home
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero-body">
+                <p class="title">
+                    Va-11 Hall-A
+                </p>
+                <p class="subtitle">
+                    Sukeban Games
+                </p>
+            </div>
+        </section>
+
+
+        <div class="columns">
+            <div class="column is-8 is-offset-2">
+                <br>
+                <p class="has-text-centered">
+                    <strong>VA-11 HALL-A: Cyberpunk Bartender Action</strong>
+                    is a booze em' up about waifus, technology, and post-dystopia life.<br><br>
+
+                    In this world, corporations reign supreme, all human life is infected with nanomachines designed to
+                    oppress them, and the terrifying White Knights ensure that everyone obeys the laws.<br><br>
+
+                    But, this is not about those people.<br><br>
+
+                    You are a bartender at VA-11 HALL-A, affectionately nicknamed "Valhalla." Although it is just a
+                    small bar downtown, it attracts the most fascinating people this side of dystopia. Keep your clients
+                    lubricated and you will be made privy to the most interesting stories.<br><br>
+                </p>
+                <div class="field">
+                    <label class="label">Leave a review</label>
+                    <div class="control">
+                        <input class="input column is-one-quarter" type="text" placeholder="Name" v-model="name"><br>
+                        <textarea class="textarea" placeholder="Write something" v-model="reviewText"></textarea><br>
+                        <a class="button is-primary" @click="addReview(games[8])">Submit</a>
+                    </div>
+                </div>
+                <p class="title">Reviews</p>
+                <div id="card-review" class="column" v-for="review in games[8].reviews">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title">{{review.name}}</p>
+                                <p class="subtitle">{{review.text}}</p>
+                                <a class="button is-danger" @click="removeReview(games[8].reviews,i)">Remove review</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
