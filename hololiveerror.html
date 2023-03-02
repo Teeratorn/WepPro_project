@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WepPro64070165</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <div id="app1">
+        <section class="hero is-info has-text-centered is-medium">
+            <!-- navigation bar -->
+            <nav class="navbar" role="navigtion" aria-label="main navigation">
+                <div id="navbar1" class="navbar-menu">
+                    <div class="navbar-start has-background-info-dark">
+                        <a class="navbar-item has-text-centered" @click="goHome()">
+                            Home
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero-body">
+                <p class="title">
+                    hololive ERROR
+                </p>
+                <p class="subtitle">
+                    株式会社Mogura
+                </p>
+            </div>
+        </section>
+
+
+        <div class="columns">
+            <div class="column is-8 is-offset-2">
+                <p class="title">Summary</p>
+                <p class="has-text-centered">
+
+                    What if a program that seems to work normally is actually made up
+                    of distorted source code?――.<br><br>
+
+                    The world is small , just like a small bug can lead to a fatal error.
+                    [Mistakes]by
+                    ――.<br><br>
+
+                    To change this world
+                    ,[ERROR]
+                    If there is no choice but to correct――.<br><br>
+
+                    <strong>summer, various projects will start with the concept theme
+                        of “horror” .</strong>
+                </p>
+                <div class="field">
+                    <label class="label">Leave a review</label>
+                    <div class="control">
+                        <input class="input column is-one-quarter" type="text" placeholder="Name" v-model="name"><br>
+                        <textarea class="textarea" placeholder="Write something" v-model="reviewText"></textarea><br>
+                        <a class="button is-primary" @click="addReview(games[6])">Submit</a>
+                    </div>
+                </div>
+                <p class="title">Reviews</p>
+                <div id="card-review" class="column" v-for="review in games[6].reviews">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title">{{review.name}}</p>
+                                <p class="subtitle">{{review.text}}</p>
+                                <a class="button is-danger" @click="removeReview(games[6].reviews,i)">Remove review</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
