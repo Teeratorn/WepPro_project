@@ -35,6 +35,12 @@ var app = new Vue({
                 reviews: [{ name: 'Gabriel', text: 'Even the stupid mob can oneshot me.' }],
             },
         ],
+        gameName: null,
+    },
+    computed: {
+        filterGames() {
+            return this.games.filter((data) => data.name.includes(this.gameName))
+        }
     },
     methods: {
         goHome() {

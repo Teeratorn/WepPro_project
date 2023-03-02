@@ -37,7 +37,7 @@
             <div class="column is-8 is-offset-2">
                 <!-- search bar -->
                 <div class="searchBar">
-                    <input class="input" type="text" placeholder="Search for something?">
+                    <input class="input" type="text" placeholder="Search for something?" v-model="gameName">
                 </div>
 
                 <!-- Column game list -->
@@ -48,7 +48,7 @@
                         <div class="is-multiline columns is-2">
 
                             <!-- Card element start here -->
-                            <div id="card_game" class="column is-one-third" v-for="game in games">
+                            <div id="card_game" class="column is-one-third" v-for="game in filterGames">
                                 <div class="card">
                                     <div class="card-image">
                                         <figure class="image">
