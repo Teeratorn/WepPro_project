@@ -66,6 +66,14 @@ var app = new Vue({
                 url: "talesofarise.html",
                 reviews: [{ name: 'Eric', text: 'I love the story so much. And also Rinwell is so cute.' }],
             },
+            {
+                name: "Va-11 Hall-A",
+                dev: "Sukeban Games",
+                price: "239",
+                img: 'https://e.snmc.io/lk/lv/x/2b3b39f5251d30c6ed64be0c724479a4/6958146',
+                url: "va11halla.html",
+                reviews: [{ name: 'Jill', text: 'The story is so good. And I love to be a bartender in a cyberpunk world.' }],
+            },
         ],
         gameName: null,
     },
@@ -81,7 +89,7 @@ var app = new Vue({
         },
         goGame(url) {
             this.setJSON()
-            location.replace(url)
+            location.href = url
         },
         setJSON() {
             const myJSON = JSON.stringify(this.games)
