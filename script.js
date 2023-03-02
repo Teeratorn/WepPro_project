@@ -84,11 +84,10 @@ var app = new Vue({
     },
     methods: {
         goHome() {
-            this.getJSON()
-            location.href = "index.html"
+            this.setJSON()
+            location.href = "main.html"
         },
         goGame(url) {
-            this.setJSON()
             location.href = url
         },
         setJSON() {
