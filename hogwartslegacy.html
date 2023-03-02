@@ -23,10 +23,10 @@
             </nav>
             <div class="hero-body">
                 <p class="title">
-                    Game review
+                    Hogwarts Legacy
                 </p>
                 <p class="subtitle">
-                    What kind of game are you looking for?
+                    Avalanche Software
                 </p>
             </div>
         </section>
@@ -34,7 +34,46 @@
 
         <div class="columns">
             <div class="column is-8 is-offset-2">
+                <p class="title">Summary</p>
+                <p class="has-text-centered">Hogwarts Legacy is an immersive, open-world action RPG set in the world
+                    first introduced in the Harry Potter books. For the first time, experience Hogwarts in the 1800s.
+                    Your character is a student who holds the key to an ancient secret that threatens to tear the
+                    wizarding world apart. Now you can take control of the action and be at the center of your own
+                    adventure in the wizarding world. Your legacy is what you make of it.<br><br>
 
+                    <strong>Explore an Open World</strong><br>
+                    The wizarding world awaits you. Freely roam Hogwarts, Hogsmeade, the Forbidden Forest, and the
+                    surrounding Overland area.<br><br>
+
+                    <strong>Be the Witch or Wizard You Want to be</strong><br>
+                    Learn spells, brew potions, grow plants, and tend to magical beasts along your journey. Get sorted
+                    into your house, forge relationships, and master skills to become the witch or wizard you want to
+                    be.<br><br>
+
+                    <strong>Experience a New Wizarding World Adventure</strong><br>
+                    Experience the wizarding world in an unexplored era to uncover a hidden truth from its past. Battle
+                    against trolls, Dark Wizards, goblins, and more as you face a dangerous villain threatening the fate
+                    of the wizarding world.<br><br>
+                </p>
+                <div class="field">
+                    <label class="label">Leave a review</label>
+                    <div class="control">
+                        <input class="input column is-one-quarter" type="text" placeholder="Name" v-model="name"><br>
+                        <textarea class="textarea" placeholder="Write something" v-model="reviewText"></textarea><br>
+                        <a class="button is-primary" @click="addReview(games[1])">Submit</a>
+                    </div>
+                </div>
+                <p class="title">Reviews</p>
+                <div id="card-review" class="column" v-for="review in games[1].reviews">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title">{{review.name}}</p>
+                                <p class="subtitle">{{review.text}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

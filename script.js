@@ -16,7 +16,7 @@ var app = new Vue({
                 price: "1590",
                 img: 'https://image.api.playstation.com/vulcan/ap/rnd/202208/0921/dR9KJAKDW2izPbptHQbh3rnj.png',
                 url: "hogwartslegacy.html",
-                reviews: [],
+                reviews: [{ name: 'Gorge', text: 'Haha funny wizard game.' }],
             },
         ],
         name: null,
