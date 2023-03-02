@@ -7,18 +7,21 @@ var app = new Vue({
                 dev: "FromSoftware Inc.",
                 price: "1790",
                 img: 'https://image.api.playstation.com/vulcan/ap/rnd/202108/0410/np2Eb60bDep9fDWtqNNSzqZI.png',
-                url: "GamePage/eldenring.html",
+                url: "eldenring.html",
             },
             {
                 name: "Hogwarts Legacy",
                 dev: "Avalance Software",
                 price: "1590",
                 img: 'https://image.api.playstation.com/vulcan/ap/rnd/202208/0921/dR9KJAKDW2izPbptHQbh3rnj.png',
-                url: "GamePage/hogwartslegacy.html",
+                url: "hogwartslegacy.html",
             },
         ]
     },
-    method: {
+    methods: {
+        goHome() {
+            location.replace("index.html")
+        },
         goGame(url) {
             location.replace(url)
         },
