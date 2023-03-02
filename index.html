@@ -40,11 +40,11 @@
                 </div>
 
                 <!-- Column game list -->
-                <div class="column is-12 pt-6">
-                    <h1 class="is-size-4 mb-4">Game list</h1>
+                <div class="column is-12">
+                    <h1 class="is-size-4">Game list</h1>
 
                     <div class="container is-max-desktop">
-                        <div class="is-multiline columns is-variable is-2">
+                        <div class="columns is-2">
 
                             <!-- Card element start here -->
                             <div id="card_game" class="column is-one-third" v-for="game in games">
@@ -60,6 +60,8 @@
                                                 <p class="title is-4">{{game.name}}</p>
                                                 <p class="subtitle is-6">{{game.dev}}</p>
                                                 <p class="subtitle is-6 has-text-danger">{{game.price}} ฿</p>
+                                                <button class="button is-info" @click="goGame(game.url)">Go to
+                                                    {{game.name}}'s page</button>
                                             </div>
                                         </div>
                                     </div>
@@ -73,7 +75,7 @@
     </div>
     <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="./index.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
